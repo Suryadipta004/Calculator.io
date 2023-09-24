@@ -23,3 +23,16 @@ arr.forEach(button => {
         }
     })
 })
+
+
+
+var icon = document.getElementById("icon");
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.innerHTML = '<i class="bx bxs-moon" ></i>';
+    }
+    else{
+        icon.innerHTML = '<i class="bx bx-sun"></i>';
+    }
+}
