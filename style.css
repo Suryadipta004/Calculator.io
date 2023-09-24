@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,37 +11,71 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(45deg, black, #3a4452);
+    background: linear-gradient(45deg, var(--body-1), var(--body-2));
 }
 :root{
+    --body-1: black;
+    --body-2: #3a4452;
     --shadow-: black;
+    --calculator-bg: #181C28;
+    --text-col: white;
+    --input-col-1: #262A45;
+    --input-col-2: #4A3D2C;
+    --btn-div-one-1: #3F4158;
+    --btn-div-one-2: #655548;
+    --right-btn-col-1: rgb(255, 123, 0);
+    --right-btn-col-2: #e4d31a;
+    --right-btn-text-col: black;
+    --first-text-col: goldenrod;
+}
+.dark-theme{
+    --body-1: rgb(232, 246, 250);
+    --body-2: white;
+    --shadow-: rgb(117, 118, 139);
+    --calculator-bg: white;
+    --text-col: blue;
+    --input-col-1: white;
+    --input-col-2: rgb(232, 232, 235);
+    --btn-div-one-1: rgb(0, 251, 255);
+    --btn-div-one-2: rgb(177, 219, 246);
+    --right-btn-col-1: blue;
+    --right-btn-col-2: rgb(0, 89, 255);
+    --right-btn-text-col: white;
+    --first-text-col: blue;
 }
 img{
     height: 10px;
 }
 .calculator{
     padding: 20px;
-    border: 1px solid white;
+    border: 1px solid var(--text-col);
     border-radius: 16px;
-    background: #181C28;
+    background: var(--calculator-bg);
     box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+.header{
+    display: flex;
+    justify-content: right;
+}
+.header i{
+    color: var(--text-col);
 }
 input{
     width: 95%;
     border: none;
     padding: 25px;
     margin: 10px;
-    background: linear-gradient(45deg, #262A45, #4A3D2C);
+    background: linear-gradient(45deg, var(--input-col-1), var(--input-col-2));
     font-size: 21px;
     text-align: right;
     border: 1px solid rgba(255, 255, 255, 0.231);
     border-radius: 10px;
     box-shadow: 0px 3px 10px var(--shadow-);
-    color: white;
+    color: var(--text-col);
     cursor: pointer;
 }
 input::placeholder{
-    color: white;
+    color: var(--text-col);
 }
 .btn-div-one button{
     border: none;
@@ -48,8 +83,8 @@ input::placeholder{
     height: 60px;
     margin: 10px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #262A45, #4A3D2C);
-    color: white;
+    background: linear-gradient(45deg, var(--input-col-1), var(--input-col-2));
+    color: var(--text-col);
     font-size: 20px;
     box-shadow: 0px 3px 10px var(--shadow-);
 }
@@ -60,7 +95,7 @@ input::placeholder{
     display: grid;
 }
 .btn-div-two button{
-    background: linear-gradient(45deg, rgb(255, 123, 0), #e4d31a);
+    background: linear-gradient(45deg, var(--right-btn-col-1), var(--right-btn-col-2));
     border: none;
     width: 60px;
     height: 60px;
@@ -68,6 +103,7 @@ input::placeholder{
     border-radius: 50%;
     font-size: 20px;
     box-shadow: 0px 3px 10px var(--shadow-);
+    color: var(--right-btn-text-col);
 }
 
 
@@ -82,6 +118,9 @@ input::placeholder{
         width: 46px;
         height: 46px;
         font-size: 17px;
+    }
+    input{
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 320px) {
